@@ -1,7 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
-
 import Button from '../Button/Button';
-
 import './SubscribeForm.css';
 
 interface FormProps {
@@ -43,7 +41,7 @@ export const SubscribeForm = ({ onSubmit }: FormProps) => {
       <div className="form-row">
         <label htmlFor="name"><strong>Name:</strong></label>
         <input type="text" placeholder="Họ tên của bạn" name="name" id="name" value={name} onChange={handleInputChange} required />
-        <label htmlFor="name"><strong>Ngày sinh:</strong></label>
+        <label htmlFor="day"><strong>Ngày sinh:</strong></label>
         <input type="number" placeholder="Ngày" name="day" id="day" value={day} onChange={handleInputChange} min="1" max="31" required />
         <input type="number" placeholder="Tháng" name="month" id="month" value={month} onChange={handleInputChange} min="1" max="12" required />
         <input type="number" placeholder="Năm" name="year" id="year" value={year} onChange={handleInputChange} min="1900" max="2099" required />

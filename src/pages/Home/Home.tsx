@@ -84,7 +84,7 @@ export default function Home() {
               Test now!!!
             </h3>
           </article>          
-			<a className="subscribe-form__button" href="/numerology">Find Your Numerology</a>
+			<a className="home__button button--shadow shadow" href="https://kabala.vn/san-pham/ebook-than-so-hoc/">Find Your Numerology</a>
         </div>
       </section>
     </div>

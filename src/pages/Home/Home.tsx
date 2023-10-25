@@ -98,8 +98,8 @@ export default function Home() {
             <h3 className="home__sub-heading--third-section">
               Test now!!!
             </h3>
-          </article>
-          <SubscribeForm onSubmit={handleSubmit} />
+          </article>          
+			<a className="subscribe-form__button" href="https://astro-app.kabastro.com/numerology">Find Your Numerology</a>
         </div>
       </section>
     </div>

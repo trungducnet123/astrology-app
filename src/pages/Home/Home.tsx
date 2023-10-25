@@ -93,10 +93,10 @@ export default function Home() {
         <div className="home__form-wrapper">
           <article>
             <h2 className="home__heading--third-section">
-              Curious about your zodiac sign?
+              Curious about your numerology?
             </h2>
             <h3 className="home__sub-heading--third-section">
-              Sign up for our newsletter!
+              Test now!!!
             </h3>
           </article>
           <SubscribeForm onSubmit={handleSubmit} />

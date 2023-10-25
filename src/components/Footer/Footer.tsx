@@ -1,11 +1,10 @@
-import downloadApple from '../../assets/images/download-apple.svg';
-import downloadAndroid from '../../assets/images/download-android.svg';
-
 import './Footer.css';
 
 export default function Footer() {
   return (
     <footer>
+      <div className="footer__download">
+      </div>
       <p className="footer__contact">
         Got any feedback? Up for a chat? Shoot me an email or direct message the
         socials below.

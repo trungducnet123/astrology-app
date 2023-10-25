@@ -84,7 +84,7 @@ export default function Home() {
               Test now!!!
             </h3>
           </article>          
-			<a className="subscribe-form__button" href="https://astro-app.kabastro.com/numerology">Find Your Numerology</a>
+			<a className="subscribe-form__button" href="/numerology">Find Your Numerology</a>
         </div>
       </section>
     </div>

@@ -9,7 +9,7 @@ interface FormProps {
 }
 
 export interface FormData {
-  name: string; // Đổi thành "name" thay vì "firstName"
+  name: string;
   day: string;
   month: string;
   year: string;
@@ -17,7 +17,7 @@ export interface FormData {
 
 export const SubscribeForm = ({ onSubmit }: FormProps) => {
   const initialFormData: FormData = {
-    name: '', // Đổi thành "name" thay vì "firstName"
+    name: '',
     day: '',
     month: '',
     year: '',

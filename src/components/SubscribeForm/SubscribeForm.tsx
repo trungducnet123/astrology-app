@@ -47,7 +47,7 @@ export const SubscribeForm = ({ onSubmit }: FormProps) => {
   };
 
   return (
-    /*<form method="post" onSubmit={handleSubmit} className="subscribe-form">
+    <form method="post" onSubmit={handleSubmit} className="subscribe-form">
       <label>
         First Name:{' '}
         <input
@@ -76,7 +76,6 @@ export const SubscribeForm = ({ onSubmit }: FormProps) => {
       <Button type="submit" className="subscribe-form__button">
         Submit form
       </Button>
-    </form>*/
-	<a className="subscribe-form__button" href="https://astro-app.kabastro.com/numerology">Find Your Numerology</a>
+    </form>
   );
 };

@@ -1,5 +1,7 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
+
 import Button from '../Button/Button';
+
 import './SubscribeForm.css';
 
 interface FormProps {
@@ -7,46 +9,74 @@ interface FormProps {
 }
 
 export interface FormData {
-  name: string;
-  day: number;
-  month: number;
-  year: number;
+  firstName: string;
+  birthday: Date | string;
+  email: string;
 }
 
 export const SubscribeForm = ({ onSubmit }: FormProps) => {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    birthday: '',
+    email: '',
+  });
+
   const initialFormData: FormData = {
-    name: '',
-    day: '',
-    month: '',
-    year: '',
+    firstName: '',
+    birthday: '',
+    email: '',
   };
 
-  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit(formData);
+
+    if (!formData.firstName || !formData.birthday || !formData.email) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
     setFormData(initialFormData);
+
+    onSubmit(formData);
   };
 
-  const { name, day, month, year } = formData;
-
   return (
-    <form method="GET" action="https://number.kabala.vn/" onSubmit={handleSubmit}>
-      <div className="form-row">
-        <label htmlFor="name"><strong>Name:</strong></label>
-        <input type="text" placeholder="Họ tên của bạn" name="name" id="name" value={name} onChange={handleInputChange} required />
-        <label htmlFor="day"><strong>Ngày sinh:</strong></label>
-        <input type="number" placeholder="Ngày" name="day" id="day" value={day} onChange={handleInputChange} min="1" max="31" required />
-        <input type="number" placeholder="Tháng" name="month" id="month" value={month} onChange={handleInputChange} min="1" max="12" required />
-        <input type="number" placeholder="Năm" name="year" id="year" value={year} onChange={handleInputChange} min="1900" max="2099" required />
-        <input type="submit" className="button tiny success" value="Xem ngay" />
-      </div>
-    </form>
+    /*<form method="post" onSubmit={handleSubmit} className="subscribe-form">
+      <label>
+        First Name:{' '}
+        <input
+          name="firstName"
+          value={formData.firstName}
+          onChange={handleInputChange}
+        />
+      </label>
+      <label>
+        Birthday:{' '}
+        <input
+          type="date"
+          name="birthday"
+          value={formData.birthday.toString().split('T')[0]}
+          onChange={handleInputChange}
+        />
+      </label>
+      <label>
+        Email:{' '}
+        <input
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+        />
+      </label>
+      <Button type="submit" className="subscribe-form__button">
+        Submit form
+      </Button>
+    </form>*/
+	<a className="subscribe-form__button" href="https://astro-app.kabastro.com/numerology">Find Your Numerology</a>
   );
 };

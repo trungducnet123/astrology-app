@@ -8,9 +8,9 @@ interface FormProps {
 
 export interface FormData {
   name: string;
-  day: string;
-  month: string;
-  year: string;
+  day: number;
+  month: number;
+  year: number;
 }
 
 export const SubscribeForm = ({ onSubmit }: FormProps) => {

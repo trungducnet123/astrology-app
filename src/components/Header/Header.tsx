@@ -30,7 +30,7 @@ export default function Header() {
       <nav className={'nav'}>
         <div className="nav__options">
           <NavLink className="logo" to="/">
-            lunar
+            astro app
           </NavLink>
           {/* <ThemeToggle /> */}
           <div className="menu" onClick={closeMenu}>
@@ -51,13 +51,13 @@ export default function Header() {
           </li>
           <li className="nav__item">
             <NavLink
-              to="/about"
+              to="https://kabastro.com"
               className={
-                location.pathname === '/about' ? 'active' : 'nav__link'
+                location.pathname === 'https://kabastro.com' ? 'active' : 'nav__link'
               }
               onClick={closeMenu}
             >
-              About
+              Kabastro
             </NavLink>
           </li>
           <li className="nav__item">

@@ -27,10 +27,10 @@ export default function Home() {
     <div className="home">
       <section className="home__first-section">
         <div className="home__info">
-          <h1 className="home__logo">lunar☾</h1>
+          <h1 className="home__logo">astro app☾</h1>
           <h2 className="home__heading">Astrology in your pocket.</h2>
           <p className="home__subheading">
-            Welcome to the mystical world of Lunar, your gateway to unlocking
+            Welcome to the mystical world of astro app, your gateway to unlocking
             the secrets of the cosmos and discovering the hidden truths that lie
             within the Tarot cards.
           </p>
@@ -50,7 +50,7 @@ export default function Home() {
       </section>
 
       <section className="home__second-section">
-        <h2 className="home__heading">What can you find on Lunar?</h2>
+        <h2 className="home__heading">What can you find on astro app?</h2>
         <ul className="home__list">
           <li className="home__list-item">
             <img src={moth} className="home__icon invert"></img>

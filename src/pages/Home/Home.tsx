@@ -5,23 +5,9 @@ import butterflyTwo from '../../assets/images/butterfly-2.png';
 import moth from '../../assets/images/moth.png';
 
 import Button from '../../components/Button/Button';
-import {
-  FormData,
-  SubscribeForm,
-} from '../../components/SubscribeForm/SubscribeForm';
 
 import './Home.css';
 
-export default function Home() {
-  const handleSubmit = (formData: FormData) => {
-    alert(`Your subscription request has been submitted!
-
-    Your Data:
-    First Name: ${formData.firstName}
-    Birthday: ${formData.birthday}
-    Email: ${formData.email}
-`);
-  };
 
   return (
     <div className="home">

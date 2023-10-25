@@ -5,10 +5,9 @@ import butterflyTwo from '../../assets/images/butterfly-2.png';
 import moth from '../../assets/images/moth.png';
 
 import Button from '../../components/Button/Button';
-
 import './Home.css';
 
-
+export default function Home() {
   return (
     <div className="home">
       <section className="home__first-section">

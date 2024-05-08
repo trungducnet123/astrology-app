@@ -22,7 +22,7 @@ export default function Home() {
           <Button
             as="link"
             children="Learn More →"
-            url={'/about'}
+            url={'https://kabastro.com/about-us'}
             target={'_self'}
             className="home__button"
           />
@@ -84,7 +84,7 @@ export default function Home() {
               Test now!!!
             </h3>
           </article>          
-			<a className="home__button button--shadow shadow" href="https://kabala.vn/san-pham/ebook-than-so-hoc/">Find Your Numerology</a>
+			<a className="home__button button--shadow shadow" href="https://kabastro.com/report/kabastro-numerology-ebook/">Find Your Numerology</a>
         </div>
       </section>
     </div>
